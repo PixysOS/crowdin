@@ -3,7 +3,7 @@
 # crowdin_sync.py
 #
 # Updates Crowdin source translations and pushes translations
-# directly to Superior OS Github.
+# directly to Pixys OS Gerrit.
 #
 # Copyright (C) 2014-2015 The CyanogenMod Project
 # This code has been modified. Portions copyright (C) 2016, The PAC-ROM Project
@@ -84,8 +84,8 @@ def push_as_commit(base_path, path, name, branch, username):
 
     # Push commit
     try:
-        repo.git.push('git@github.com:SuperiorOS/%s' % (name),
-                      'HEAD:%s' % branch)
+        repo.git.push('ssh://%s@gerrit.pixysos.com:29418/%s' % (username, name),
+                      'HEAD:refs/for/%s' % branch)
         print('Successfully pushed commit for %s' % name)
     except:
         print('Failed to push commit for %s' % name, file=sys.stderr)

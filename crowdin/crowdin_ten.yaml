@@ -1,8 +1,9 @@
-# crowdin-pie.yaml
+# crowdin-ten.yaml
 #
 # Crowdin configuration file for AospExtended
 #
-# Copyright (C) 2019 Superior OS Project
+# Copyright (C) 2018-19 Superior OS Project
+# Copyright (C) 2018-19 PixysOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,13 +19,13 @@
 
 api_key: <%= ENV['CROWDIN_API_KEY'] %>
 base_path: <%= ENV['CROWDIN_BASE_PATH'] %>
-project_identifier: superior-os
+project_identifier: pixys
 preserve_hierarchy: true
 
 files:
-# Default for Superior OS
+# Default for Pixys OS
   -
-    source:      '/**/values/superior_strings.xml'
+    source:      '/**/values/pixys_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: &anchor
       android_code:
@@ -121,56 +122,3 @@ files:
         zh-HK: zh-rHK
         zh-TW: zh-rTW
         zu: zu
-
-# SmartNav
-  -
-    source:      '/packages/apps/SmartNav/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-
-# SmartNavSettings
-  -
-    source:      '/packages/apps/SmartNavSettings/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-    
-# DeskClock
-  -
-    source:      '/packages/apps/DeskClock/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/Snap/res/values/cm_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-# ExactCalculator
-  -
-    source:      '/packages/apps/ExactCalculator/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-    
-# DownloadProvider
-  -
-    source:      '/packages/providers/DownloadProvider/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-# Snap
-  -
-    source:      '/packages/apps/Snap/res/values/cm_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/Snap/res/values/qcomstrings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/Snap/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/Snap/quickReader/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
