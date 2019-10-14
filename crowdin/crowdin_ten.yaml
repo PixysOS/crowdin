@@ -19,7 +19,7 @@
 
 api_key: <%= ENV['CROWDIN_API_KEY'] %>
 base_path: <%= ENV['CROWDIN_BASE_PATH'] %>
-project_identifier: pixys
+project_identifier: pixysos
 preserve_hierarchy: true
 
 files:
