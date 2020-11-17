@@ -33,7 +33,7 @@ Base path should contain all Pixys OS trees in subfolders, named after Pixys OS 
 
 Setup translation source:
 
-    repo init -u https://github.com/PixysOS/manifest -b ten -m crowdin.xml --depth=1
+    repo init -u https://github.com/PixysOS/manifest -b eleven -m crowdin.xml --depth=1
 
 Execute:
 
